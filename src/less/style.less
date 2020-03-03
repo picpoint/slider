@@ -11,9 +11,21 @@
 	box-sizing: border-box;
 }
 
-.sliderblock {
-  border: @border;
-  display: flex;
-  height: 500px;
-  
+.slblock {  
+  &__wrapper {        
+    display: flex;
+  }
+  &__slider {
+    border: @border;
+    display: flex;    
+    justify-content: center;
+    height: 500px;    
+    width: 100%;
+    img {      
+      border: @border;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
 }
