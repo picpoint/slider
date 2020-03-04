@@ -16,16 +16,20 @@ class ShowSlide {
     
     setTimeout(() => {
       this.blockslider.firstElementChild.style.position = 'relative';      
-      for(let i = 0; i < this.arr.length; i++) {
+      for(let i = 0; i < this.arr.length; i++) {        
+        this.blockslider.firstElementChild.setAttribute('src', `/pict/${this.arr[i]}`);
         setInterval(() => {
-          this.arr[i].style.position
-        }, 1500);
+          if(offset < wdthScreen) {
+            offset += 5;            
+            this.blockslider.firstElementChild.style.right = offset + 'px';
+          }
+        }, 100);
       }
-    }, 3000);
+    }, 2000);
     
     
     
-    this.blockslider.firstElementChild.setAttribute('src', `/pict/${this.arr[0]}`);    
+    //this.blockslider.firstElementChild.setAttribute('src', `/pict/${this.arr[0]}`);    
   }
 
 }
