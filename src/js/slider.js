@@ -13,15 +13,16 @@ class ShowSlide {
 
   show() {
     let offset = 0;
+    let pict = this.blockslider.firstElementChild;
     
     setTimeout(() => {
-      this.blockslider.firstElementChild.style.position = 'relative';      
-      for(let i = 0; i < this.arr.length; i++) {        
-        this.blockslider.firstElementChild.setAttribute('src', `/pict/${this.arr[i]}`);
+      pict.style.position = 'relative';      
+      for(let i = 0; i < this.arr.length; i++) {                
         setInterval(() => {
           if(offset < wdthScreen) {
+            pict.setAttribute('src', `/pict/${this.arr[i]}`);
             offset += 5;            
-            this.blockslider.firstElementChild.style.right = offset + 'px';
+            pict.style.right = offset + 'px';
           }
         }, 100);
       }
