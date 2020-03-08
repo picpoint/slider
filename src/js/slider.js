@@ -1,6 +1,6 @@
 const slblock = document.querySelector('.slblock__slider');
 const wdthScreen = document.documentElement.clientWidth;
-let mass = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'];
+let mass = ['01.jpg', '02.jpg', '03.jpg'];
 
 console.log(`width screen - ${wdthScreen}`);
 
@@ -15,9 +15,9 @@ class ShowSlide {
     let offset = 0;
     let count = 0;
     let pict = this.blockslider.firstElementChild;
-    pict.style.position = 'relative';       
+    pict.style.position = 'relative';           
+    pict.setAttribute('src', `/pict/${this.arr[count]}`);
     
-    pict.setAttribute('src', `/pict/${this.arr[0]}`);
     setInterval(() => {
       if(count == this.arr.length) {
         count = 0;
