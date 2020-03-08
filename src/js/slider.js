@@ -25,7 +25,7 @@ class ShowSlide {
       } else {
         pict.setAttribute('src', `/pict/${this.arr[count++]}`);
       }
-    }, 3000);
+    }, 5000);
             
   }
 
