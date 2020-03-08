@@ -17,11 +17,7 @@ class ShowSlide {
     let pict = this.blockslider.firstElementChild;
     pict.style.position = 'relative';       
     
-    for(let i = 0; i < this.arr.length; i++) {      
-      pict.setAttribute('src', `/pict/${this.arr[count]}`);
-      console.log(this.arr[i]);
-    }
-
+    pict.setAttribute('src', `/pict/${this.arr[0]}`);
     setInterval(() => {
       if(count == this.arr.length) {
         count = 0;
@@ -29,8 +25,7 @@ class ShowSlide {
       } else {
         pict.setAttribute('src', `/pict/${this.arr[count++]}`);
       }
-    }, 2000);
-
+    }, 3000);
             
   }
 
