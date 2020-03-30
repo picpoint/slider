@@ -1,7 +1,7 @@
 {
-  "name": "slider",
+  "name": "test_task",
   "version": "1.0.0",
-  "description": "slider for site",
+  "description": "tests tasks for job",
   "main": "gulpfile.js",
   "scripts": {},
   "author": "rmtar",

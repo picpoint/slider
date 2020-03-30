@@ -1,9 +1,9 @@
 @import "smart-grid.less";
 @import "var.less";
-
+@import "fonts.less";
 .reset();
 
-.wrapper {  // центрущая обертка
+.wrapper {
 	.wrapper();
 }
 
@@ -11,107 +11,144 @@
 	box-sizing: border-box;
 }
 
-.slblock {  
-  &__wrapper {        
-    display: flex;
-  }
-  &__slider {
-    border: @border;
-    display: flex;    
-    justify-content: center;
-    height: 500px;    
-    width: 100%;
-    img {      
-      border: @border;
-      height: 100%;
-      width: 100%;
-      animation: animationslider 5s ease-in-out infinite;
-    }
-  }
+
+//MIXINS BLOCK START
+.mixinplans {
+  border: @border;    
+  display: flex;    
+  justify-content: space-between;  
+  align-self: center;
+  width: 95%;
+  height: 80px;  
+  margin: 3px 0;
 }
 
-@keyframes animationslider {
-  0% {
-    opacity: 0.1;
+.mixincheckeds {
+  border: @border;
+  display: flex;          
+  align-items: center;            
+}
+
+.mixincheckblock {
+  border: 5px solid @bordercolor;    
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;    
+  margin: 0 20px;
+}
+
+.mixintextplan {
+  border: @border;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+  color: @colordarkgray;   
+}
+
+.mixintxtper {
+  border: @border;
+  display: flex;
+  align-items: center;
+  color: @colordarkgray;    
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+//MIXINS BLOCK END
+
+
+
+.wrp {
+  //border: @border;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  &__frsttask {
+    border: 15px solid @bordercolor;
+    align-self: center;
+    display: flex;    
+    flex-direction: column;    
+    width: 35%;
+    height: 900px;
+    background-color: @bckgcolor;
+  }
+  
+  &__planone {
+    .mixinplans();
+    margin-top: 20px;
+  }
+  &__checkedone {
+    .mixincheckeds();
+  }
+  &__checkblockone {
+    .mixincheckblock();
+  }
+  &__textplanone {
+    .mixintextplan();    
+  }
+  &__txtperone {
+    .mixintxtper();
   }
 
-  5% {
-    opacity: 0.3;
+
+  &__plantwo {
+    .mixinplans();
+  }
+  &__checkedtwo {
+    .mixincheckeds();
+  }
+  &__checkblocktwo {
+    .mixincheckblock();
+  }
+  &__textplantwo {
+    .mixintextplan();
+  }
+  &__txtpertwo {
+    .mixintxtper();
   }
 
-  10% {
-    opacity: 0.5;
+
+  &__planthree {
+    .mixinplans();
+  }
+  &__checkedthree {
+    .mixincheckeds();
+  }
+  &__checkblockthree {
+    .mixincheckblock();
+  }
+  &__textplanthree {
+    .mixintextplan();
+  }
+  &__txtperthree {
+    .mixintxtper();
   }
 
-  15% {
-    opacity: 0.7;
+  &__numlicenses {
+    //border: @border;
+    border-top: 1px solid @colorline;
+    border-bottom: 1px solid @colorline;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    align-self: center;
+    width: 95%;
+    padding: 35px 0;
+    margin: 10px 0;
+  }
+  &__textlicenses {
+    //border: @border;
+    padding: 0 15px;
+  }
+  &__listslicenses {
+    //border: @border;    
+    select {
+      border: 2px solid @colorlightblue;
+      width: 60px;
+      height: 30px;
+      background-color: white;      
+      outline: none;
+    }
   }
 
-  20% {
-    opacity: 0.9;
-  }
-
-  25% {
-    opacity: 1;
-  }
-
-  30% {
-    opacity: 1;
-  }
-
-  35% {
-    opacity: 1;
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  45% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  55% {
-    opacity: 1;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  65% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 0.9;
-  }
-
-  80% {
-    opacity: 0.7;
-  }
-
-  85% {
-    opacity: 0.5;
-  }
-
-  90% {
-    opacity: 0.3;
-  }
-
-  95% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 0;    
-  }
+  
 }
