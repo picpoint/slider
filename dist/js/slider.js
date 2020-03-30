@@ -34,3 +34,5 @@ class ShowSlide {
 
 let slider = new ShowSlide(slblock, mass);
 slider.show();
+
+
